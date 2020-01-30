@@ -1,0 +1,52 @@
+{
+    "name": "zwarthoorn/eveapi",
+    "type": "library",
+    "description": "a all in 1 package to acces the full api of eve online in php",
+    "keywords": [
+        "zwarthoorn",
+        "eveapi",
+        "eve online",
+        "eve",
+        "api",
+        "esi"
+    ],
+    "homepage": "https://github.com/zwarthoorn/eveapi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Walter",
+            "homepage": "https://github.com/zwarthoorn",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=8.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "zwarthoorn\\eveapi\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "zwarthoorn\\eveapi\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
