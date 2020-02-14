@@ -20,7 +20,9 @@
         }
     ],
     "require": {
-        "php" : "~7.2"
+        "php": "~7.2",
+        "killmails/oauth2-eve": "^1.0",
+        "tkhamez/swagger-eve-php": "^3.2"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=8.0",

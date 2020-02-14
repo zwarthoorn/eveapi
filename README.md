@@ -7,10 +7,11 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Zwarthoorn``` ```zwarthoorn``` ```https://github.com/zwarthoorn``` ```zwarthoorn@example.com``` ```zwarthoorn``` ```eveapi``` ```a all in 1 package to acces the full api of eve online in php``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This is a small package to connect to the eve online esi server.
+This will support the OAuth 2 implementation for the esi client so you will get the full experience
+
+We are working towards extensively holding ourselves to at least PSR-2 / PSR 4
 
 ## Structure
 
