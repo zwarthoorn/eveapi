@@ -22,7 +22,8 @@
     "require": {
         "php": "~7.2",
         "killmails/oauth2-eve": "^1.0",
-        "tkhamez/swagger-eve-php": "^3.2"
+        "tkhamez/swagger-eve-php": "^3.2",
+        "vlucas/phpdotenv": "^4.1"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=8.0",

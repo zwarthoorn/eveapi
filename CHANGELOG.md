@@ -2,6 +2,23 @@
 
 All notable changes to `eveapi` will be documented in this file.
 
+## [0.0.3] - 2020-02-07
+
+### Added
+- .env Dependency
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Nothing
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
 ## [0.0.2] - 2020-02-07
 
 ### Added
