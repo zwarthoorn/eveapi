@@ -2,3 +2,6 @@
 vendor
 composer.lock
 .env
+phpdocker
+docker-compose.yml
+public
