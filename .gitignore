@@ -1,7 +1,7 @@
 .idea
 vendor
 composer.lock
-.env
+src/Utilz/.env
 phpdocker
 docker-compose.yml
 public
