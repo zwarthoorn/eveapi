@@ -35,7 +35,7 @@ class EveAuth implements EveAuthInterface
         // (e.g. state).
 
         $options = [
-            'scope' => 'esi-mail.organize_mail.v1 esi-mail.read_mail.v1 esi-mail.send_mail.v1'
+            'scope' => getenv('SCOPE')
         ];
         $authorizationUrl = $this->provider->getAuthorizationUrl($options);
 
