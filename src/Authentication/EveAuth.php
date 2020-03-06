@@ -5,6 +5,7 @@ namespace zwarthoorn\eveapi\Authentication;
 
 
 use Killmails\OAuth2\Client\Provider\EveOnline;
+use League\OAuth2\Client\Token\AccessToken;
 use zwarthoorn\eveapi\Utilz\EnvService;
 use function Couchbase\defaultDecoder;
 use function PHPUnit\Framework\throwException;
@@ -13,6 +14,7 @@ class EveAuth implements EveAuthInterface
 {
 
     private $provider;
+    private $resourceOwner;
 
     public function __construct()
     {
@@ -103,6 +105,8 @@ class EveAuth implements EveAuthInterface
         }
 
         if ($_COOKIE['accesToken']) {
+            $accestoken = new AccessToken(['access_token' => $_COOKIE['accesToken']]);
+            $this->setResourceOwner($this->provider->getResourceOwner($accestoken));
             return $_COOKIE['accesToken'];
         }
 
@@ -145,5 +149,10 @@ class EveAuth implements EveAuthInterface
     public function setResourceOwner($resourceOwnder)
     {
         $this->resourceOwner = $resourceOwnder;
+    }
+
+    public function getResourceOwner()
+    {
+        return $this->resourceOwner;
     }
 }
