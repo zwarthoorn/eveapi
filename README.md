@@ -11,6 +11,9 @@
 This is a small package to connect to the eve online esi server.
 This will support the OAuth 2 implementation for the esi client so you will get the full experience
 
+If you want the full documentation of the api you can also see this website if your endpoint is not implented yet.
+https://github.com/tkhamez/swagger-eve-php
+
 We are working towards extensively holding ourselves to at least PSR-2 / PSR 4
 
 ## Structure
@@ -18,12 +21,7 @@ We are working towards extensively holding ourselves to at least PSR-2 / PSR 4
 If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
 
 ```
-bin/        
-build/
-docs/
-config/
 src/
-tests/
 vendor/
 ```
 
