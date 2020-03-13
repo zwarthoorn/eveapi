@@ -1,6 +1,23 @@
 # Changelog
 
 All notable changes to `eveapi` will be documented in this file.
+## [0.1.0] - 2020-03-13
+
+### Added
+- numeres endpoints
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Contacts
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
 
 ## [0.0.3] - 2020-02-07
 
