@@ -12,7 +12,6 @@ use zwarthoorn\eveapi\Authentication\EveAuth;
 
 class Mail extends MailApi
 {
-
     /**
      * @var EveAuth
      */
