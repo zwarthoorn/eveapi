@@ -99,12 +99,12 @@ class EveAuth implements EveAuthInterface
 
     public function makeAuthentication()
     {
-        if ($_COOKIE['Expired'])
+        if (isset($_COOKIE['Expired']))
         {
             $this->checkIfExpired();
         }
 
-        if ($_COOKIE['accesToken']) {
+        if (isset($_COOKIE['accesToken'])) {
             $accestoken = new AccessToken(['access_token' => $_COOKIE['accesToken']]);
             $this->setResourceOwner($this->provider->getResourceOwner($accestoken));
             return $_COOKIE['accesToken'];
