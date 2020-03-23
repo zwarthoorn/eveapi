@@ -1,6 +1,23 @@
 # Changelog
 
 All notable changes to `eveapi` will be documented in this file.
+## [0.1.1] - 2020-03-13
+
+### Added
+- Nothing
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Mail
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
 ## [0.1.0] - 2020-03-13
 
 ### Added

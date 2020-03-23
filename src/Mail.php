@@ -8,6 +8,7 @@ use GuzzleHttp\ClientInterface;
 use Swagger\Client\Eve\Api\MailApi;
 use Swagger\Client\Eve\Configuration;
 use Swagger\Client\Eve\HeaderSelector;
+use zwarthoorn\eveapi\Authentication\EveAuth;
 
 class Mail extends MailApi
 {
