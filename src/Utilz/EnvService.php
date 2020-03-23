@@ -9,7 +9,8 @@ class EnvService
 {
     public static function seedEnvFile(): void
     {
-        $dotenv = Dotenv::createImmutable(__DIR__);
+        $pathInPieces = explode('/', __DIR__);
+        $dotenv = Dotenv::createImmutable('/'.$pathInPieces[1]);
         $dotenv->load();
     }
 
