@@ -16,18 +16,29 @@ class EveAuth implements EveAuthInterface
     private $provider;
     private $resourceOwner;
 
-    public function __construct()
+    public function __construct($keys = null)
     {
-        if (!getenv('SEVERNAME'))
-        {
+        if (!getenv('SEVERNAME')) {
             EnvService::seedEnvFile();
         }
-        $this->provider = new EveOnline([
-            'clientId' => getenv('CLIENT_ID'),
-            'clientSecret' => getenv('CLIENT_SECRET'),
-            'redirectUri' => getenv('REDIRECT_URL'),
 
-        ]);
+        if ($keys === null) {
+            $this->provider = new EveOnline([
+                'clientId' => getenv('CLIENT_ID'),
+                'clientSecret' => getenv('CLIENT_SECRET'),
+                'redirectUri' => getenv('REDIRECT_URL'),
+
+            ]);
+        } else {
+            $this->provider = new EveOnline([
+                'clientId' => $keys['client_id'],
+                'clientSecret' => $keys['client_secret'],
+                'redirectUri' => $keys['redirect_url'],
+
+            ]);
+
+        }
+
     }
 
     public function sendAuthenticationRequest()
@@ -78,8 +89,8 @@ class EveAuth implements EveAuthInterface
 
             //save all accestokens
 
-            setcookie('accesToken',$accessToken->getToken());
-            setcookie('Refresh',$accessToken->getRefreshToken());
+            setcookie('accesToken', $accessToken->getToken());
+            setcookie('Refresh', $accessToken->getRefreshToken());
             setcookie('Expired', $accessToken->getExpires());
 
             // Using the access token, we may look up details about the
@@ -99,8 +110,7 @@ class EveAuth implements EveAuthInterface
 
     public function makeAuthentication()
     {
-        if (isset($_COOKIE['Expired']))
-        {
+        if (isset($_COOKIE['Expired'])) {
             $this->checkIfExpired();
         }
 
@@ -117,8 +127,7 @@ class EveAuth implements EveAuthInterface
         try {
             $resourceOwner = $this->procesAuthenticationRequest();
             $this->setResourceOwner($resourceOwner);
-        }catch (\Exception $e)
-        {
+        } catch (\Exception $e) {
             echo $e->getMessage();
             throw new \Exception($e->getMessage());
         }

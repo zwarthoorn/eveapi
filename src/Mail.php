@@ -17,11 +17,11 @@ class Mail extends MailApi
      */
     private $eveAuth;
 
-    public function __construct(ClientInterface $client = null, Configuration $config = null, HeaderSelector $selector = null, $host_index = 0)
+    public function __construct($keys = null, ClientInterface $client = null, Configuration $config = null, HeaderSelector $selector = null, $host_index = 0)
     {
         if ($config === null)
         {
-            $this->eveAuth = new EveAuth();
+            $this->eveAuth = new EveAuth($keys);
             $config = new Configuration();
             $config->setAccessToken($this->eveAuth->makeAuthentication());
         }
